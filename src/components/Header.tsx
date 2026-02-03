@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -78,15 +78,8 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Right side - Phone & CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="tel:+36706181725"
-              className="flex items-center gap-1.5 text-gray-400 hover:text-[#00B1E1] transition-colors text-sm"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#00B1E1]" />
-              <span>+36 70 618 1725</span>
-            </a>
+          {/* Right side - CTA */}
+          <div className="hidden lg:flex items-center">
             <Link
               href="/kapcsolat"
               className="bg-[#00B1E1] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0099c4] transition-colors"
@@ -124,13 +117,6 @@ export default function Header() {
               <Link href="/kapcsolat" className="text-gray-300 hover:text-[#00B1E1] transition-colors">
                 Kapcsolat
               </Link>
-              <a
-                href="tel:+3612345678"
-                className="flex items-center gap-2 text-gray-400 hover:text-[#00B1E1] transition-colors"
-              >
-                <Phone className="w-4 h-4 text-[#00B1E1]" />
-                <span>+36 1 234 5678</span>
-              </a>
               <Link href="/kapcsolat" className="bg-[#00B1E1] text-white px-4 py-3 rounded-lg text-center font-medium">
                 Ajánlatkérés
               </Link>
