@@ -6,9 +6,9 @@ import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Okos otthon blog: hírek, tippek, útmutatók az intelligens otthon automatizálás világából. Apple HomeKit, világítás, biztonság témákban.",
+  description: "Okos otthon blog: hírek, tippek, útmutatók az intelligens otthon automatizálás világából. Apple HomeKit, Homebridge, világítás, biztonság témákban.",
   openGraph: {
-    title: "Blog | megoldjukosba",
+    title: "Blog | megoldjukokosba",
     description: "Hírek, tippek és útmutatók az okos otthon világából.",
   },
 };
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 const blogPosts = [
   {
     id: 1,
-    title: "Az okos otthon 5 legnagyobb előnye 2024-ben",
+    title: "Az okos otthon 5 legnagyobb előnye 2026-ban",
     excerpt: "Fedezze fel, hogyan teheti kényelmesebbé és hatékonyabbá otthonát az intelligens automatizálással. Az energiamegtakarítástól a biztonságig minden előnyt bemutatunk.",
     image: "https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Okos Otthon",
-    author: "Kovács Péter",
-    date: "2024. január 15.",
+    author: "Kósa Ferenc",
+    date: "2026. január 15.",
     readTime: "5 perc"
   },
   {
@@ -30,8 +30,8 @@ const blogPosts = [
     excerpt: "Átfogó útmutató az Apple HomeKit rendszerhez. Megtudhatja, mely eszközök kompatibilisek és hogyan építhet fel egy tökéletesen integrált okos otthont.",
     image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Technológia",
-    author: "Nagy Anna",
-    date: "2024. január 10.",
+    author: "Kósa Ferenc",
+    date: "2026. január 10.",
     readTime: "8 perc"
   },
   {
@@ -40,8 +40,8 @@ const blogPosts = [
     excerpt: "A megfelelő okos világítási rendszer kiválasztása kulcsfontosságú. Összehasonlítjuk a legnépszerűbb megoldásokat és segítünk a döntésben.",
     image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Világítás",
-    author: "Szabó László",
-    date: "2024. január 5.",
+    author: "Kósa Ferenc",
+    date: "2026. január 5.",
     readTime: "6 perc"
   },
   {
@@ -50,8 +50,8 @@ const blogPosts = [
     excerpt: "Az okos biztonsági rendszerek forradalmasították az otthonvédelmet. Ismerje meg a legújabb technológiákat a kameráktól az okos zárakig.",
     image: "https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Biztonság",
-    author: "Tóth Gábor",
-    date: "2023. december 28.",
+    author: "Kósa Ferenc",
+    date: "2026. január 3.",
     readTime: "7 perc"
   },
   {
@@ -60,8 +60,8 @@ const blogPosts = [
     excerpt: "Hogyan csökkentheti jelentősen energiafogyasztását intelligens automatizálással? Gyakorlati tippek és valós megtakarítási adatok.",
     image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Energia",
-    author: "Molnár Eszter",
-    date: "2023. december 20.",
+    author: "Kósa Ferenc",
+    date: "2026. január 2.",
     readTime: "5 perc"
   },
   {
@@ -70,8 +70,8 @@ const blogPosts = [
     excerpt: "Sonos, Bose, Denon HEOS - melyiket válassza? Részletes összehasonlítás a legjobb multiroom hangrendszerekről.",
     image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Audio/Video",
-    author: "Horváth Tamás",
-    date: "2023. december 15.",
+    author: "Kósa Ferenc",
+    date: "2026. január 1.",
     readTime: "10 perc"
   },
   {
@@ -80,8 +80,8 @@ const blogPosts = [
     excerpt: "Az okos zárak új szintre emelik az otthonbiztonságot. Melyik típust válassza és mire figyeljen telepítéskor?",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Biztonság",
-    author: "Kiss Márton",
-    date: "2023. december 10.",
+    author: "Kósa Ferenc",
+    date: "2026. február 10.",
     readTime: "6 perc"
   },
   {
@@ -90,8 +90,8 @@ const blogPosts = [
     excerpt: "A két legnépszerűbb okos otthon protokoll összehasonlítása. Előnyök, hátrányok és felhasználási területek.",
     image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Technológia",
-    author: "Varga Zsolt",
-    date: "2023. december 5.",
+    author: "Kósa Ferenc",
+    date: "2026. február 5.",
     readTime: "8 perc"
   },
   {
@@ -100,13 +100,63 @@ const blogPosts = [
     excerpt: "Automatikus redőnyvezérlés a maximális kényelem és energiahatékonyság érdekében. Teljes útmutató a lehetőségekről.",
     image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     category: "Okos Otthon",
-    author: "Fekete Réka",
-    date: "2023. november 28.",
+    author: "Kósa Ferenc",
+    date: "2026. február 1.",
     readTime: "5 perc"
+  },
+  {
+    id: 10,
+    title: "Homebridge: Nem HomeKit eszközök integrálása",
+    excerpt: "Hogyan tegyük HomeKit-kompatibilissé a nem támogatott okos eszközöket? Teljes útmutató a Homebridge telepítéséhez és konfigurálásához.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Homebridge",
+    author: "Kósa Ferenc",
+    date: "2026. február 15.",
+    readTime: "12 perc"
+  },
+  {
+    id: 11,
+    title: "Homebridge plugin-ek: A legjobb bővítmények 2026-ban",
+    excerpt: "A legnépszerűbb és leghasznosabb Homebridge plugin-ek áttekintése. Tuya, Xiaomi, Shelly és más eszközök integrálása.",
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Homebridge",
+    author: "Kósa Ferenc",
+    date: "2026. február 20.",
+    readTime: "10 perc"
+  },
+  {
+    id: 12,
+    title: "Homebridge telepítése Raspberry Pi-ra",
+    excerpt: "Lépésről lépésre útmutató a Homebridge telepítéséhez Raspberry Pi-ra. A legolcsóbb módja az okos otthon bővítésének.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Homebridge",
+    author: "Kósa Ferenc",
+    date: "2026. február 25.",
+    readTime: "15 perc"
+  },
+  {
+    id: 13,
+    title: "Tuya eszközök HomeKit-ben Homebridge-dzsel",
+    excerpt: "Hogyan integráljuk az olcsó Tuya/Smart Life eszközöket az Apple HomeKit rendszerbe? Részletes konfiguráció és tippek.",
+    image: "https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Homebridge",
+    author: "Kósa Ferenc",
+    date: "2026. március 1.",
+    readTime: "8 perc"
+  },
+  {
+    id: 14,
+    title: "Homebridge vs. Home Assistant: Melyiket válasszam?",
+    excerpt: "A két legnépszerűbb nyílt forráskódú okos otthon platform összehasonlítása. Előnyök, hátrányok és felhasználási esetek.",
+    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Homebridge",
+    author: "Kósa Ferenc",
+    date: "2026. március 5.",
+    readTime: "10 perc"
   }
 ];
 
-const categories = ["Összes", "Okos Otthon", "Technológia", "Világítás", "Biztonság", "Audio/Video"];
+const categories = ["Összes", "Okos Otthon", "Technológia", "Világítás", "Biztonság", "Audio/Video", "Homebridge"];
 
 export default function BlogPage() {
   return (

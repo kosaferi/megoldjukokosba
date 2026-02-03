@@ -78,6 +78,156 @@ A beléptető rendszer RFID kártyákkal és arcfelismeréssel működik, míg a
       year: "2023"
     },
     icon: Building2
+  },
+  {
+    id: "4",
+    title: "Boutique Hotel - Belváros",
+    category: "Vendéglátás",
+    description: "25 szobás boutique hotel teljes automatizálása, szobánkénti egyedi vezérléssel és központi menedzsment rendszerrel.",
+    fullDescription: `A budapesti belvárosban található boutique hotel projektje különleges kihívást jelentett: 25 egyedi szoba mindegyikének saját intelligens rendszert kellett kapnia, miközben a központi menedzsment is egyszerű maradjon.
+
+Minden szobában egyedi termosztát, világításvezérlés és elektronikus zár került telepítésre. A vendégek saját okostelefonjukról is irányíthatják a szoba funkcióit a hotel alkalmazásán keresztül.
+
+A központi menedzsment rendszer lehetővé teszi a személyzet számára a foglaltság alapú energiaoptimalizálást, az automatikus takarítási ütemezést és a vendégigények azonnali kezelését.`,
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    features: ["Szobavezérlés", "Központi menedzsment", "Energiaoptimalizálás", "Vendég app", "Elektronikus zárak", "Automatikus jelenetkezelés"],
+    specs: {
+      area: "1200 m²",
+      duration: "8 hét",
+      devices: "250+ eszköz",
+      year: "2023"
+    },
+    icon: Hotel
+  },
+  {
+    id: "5",
+    title: "Családi Ház - Szentendre",
+    category: "Lakóépület",
+    description: "Hagyományos stílusú ház modern okos otthon megoldásokkal, kertautomatizálással és napelemes integrációval.",
+    fullDescription: `Szentendrén, a művészek városában egy hagyományos magyar stílusú családi ház kapott modern okos otthon rendszert, miközben megőrizte egyedi karakterét.
+
+A projekt különlegessége a kertautomatizálás volt: intelligens öntözőrendszer, kültéri világítás napnyugtához igazítva, és automatikus kapu- és garázsvezérlés. A napelemes rendszer integrációja révén a ház energiája nagyrészt megújuló forrásból származik.
+
+A beltéri rendszer Apple HomeKit alapú, így az egész család könnyedén kezelheti iPhone-ról vagy iPadről. A fűtés és hűtés zónánként szabályozható az igények szerint.`,
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    features: ["Kertautomatizálás", "Napelem integráció", "Okos öntözés", "Garázskapu vezérlés", "Apple HomeKit", "Zónás fűtés"],
+    specs: {
+      area: "220 m²",
+      duration: "5 hét",
+      devices: "90+ eszköz",
+      year: "2024"
+    },
+    icon: Home
+  },
+  {
+    id: "6",
+    title: "Média Stúdió - Budapest",
+    category: "Kereskedelmi",
+    description: "Professzionális média stúdió komplex AV rendszerrel, akusztikai vezérléssel és streaming infrastruktúrával.",
+    fullDescription: `Egy budapesti médiacég új stúdiójának teljes technikai felszerelését végeztük, a hangszigeteléshez adaptálódó akusztikai vezérléstől a streaming infrastruktúráig.
+
+A stúdió 4K felbontású kamerarendszerrel, professzionális LED világítással és többcsatornás hangrendszerrel lett felszerelve. Az egész rendszer egyetlen vezérlőpultról irányítható, ami egyszerűsíti az élő adások menedzselését.
+
+Különleges figyelmet fordítottunk a rugalmasságra: a stúdió percek alatt átalakítható podcasthoz, videóinterjúhoz vagy nagyobb produkciókhoz is.`,
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1604514628550-37477afdf4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    features: ["Profi AV rendszer", "Akusztikai vezérlés", "Streaming", "LED világítás", "4K kamerák", "Egyérintéses vezérlés"],
+    specs: {
+      area: "150 m²",
+      duration: "6 hét",
+      devices: "180+ eszköz",
+      year: "2024"
+    },
+    icon: Tv
+  },
+  {
+    id: "7",
+    title: "Wellness Központ - Eger",
+    category: "Vendéglátás",
+    description: "Luxus wellness központ automatizálása medence vezérléssel, szauna szabályozással és hangulat világítással.",
+    fullDescription: `Az egri wellness központ projektje a vendégélmény maximalizálására fókuszált, intelligens rendszerekkel a medencétől a szaunáig minden területen.
+
+A medencevezérlés automatikusan kezeli a víz hőmérsékletét, kémiai összetételét és a vízforgatást. A szaunák egyéni hőmérséklet-szabályozással rendelkeznek, és az előfűtés időzítése is automatizált.
+
+A hangulat világítás különböző zónákban más-más atmoszférát teremt: energizáló a fitnesz részben, relaxáló a pihenőzónában. A zenerendszer is zónánként vezérelhető a vendégek igényei szerint.`,
+    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    features: ["Medence vezérlés", "Szauna automatika", "Spa világítás", "Hőmérséklet szabályozás", "Multizone audio", "Vízkémia monitoring"],
+    specs: {
+      area: "800 m²",
+      duration: "10 hét",
+      devices: "200+ eszköz",
+      year: "2023"
+    },
+    icon: Hotel
+  },
+  {
+    id: "8",
+    title: "Smart Apartman - Siófok",
+    category: "Lakóépület",
+    description: "Balatoni apartman teljes okosításása távoli hozzáféréssel a tulajdonos számára és vendég üzemmóddal.",
+    fullDescription: `A siófoki apartman projektje kifejezetten a rövid távú bérbeadásra optimalizált okos otthon megoldást igényelt, ahol a tulajdonos távolról is menedzselni tudja az ingatlant.
+
+A rendszer tartalmaz okos zárakat, amelyeknél a belépési kódok automatikusan generálódnak a foglalások alapján. A termosztát vendégérkezés előtt automatikusan előfűti vagy előhűti a lakást, majd távozáskor energiatakarékos módba vált.
+
+A tulajdonos telefonján értesítést kap minden belépésről és kilépésről, láthatja az energiafogyasztást, és bármikor beavatkozhat, ha szükséges. A vendégek egyszerű, korlátozott hozzáférést kapnak a fontos funkciókhoz.`,
+    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    features: ["Távoli hozzáférés", "Vendég mód", "Okos zár", "Energiafigyelés", "Automatikus kódgenerálás", "Klímavezérlés"],
+    specs: {
+      area: "65 m²",
+      duration: "2 hét",
+      devices: "35+ eszköz",
+      year: "2024"
+    },
+    icon: Home
+  },
+  {
+    id: "9",
+    title: "Étterem - Buda",
+    category: "Vendéglátás",
+    description: "Prémium étterem hangulat vezérlése asztalonkénti világítással és multizone hangrendszerrel.",
+    fullDescription: `A budai prémium étterem projektje az étkezési élmény fokozását célozta meg intelligens világítás és hangrendszer segítségével.
+
+Az asztalonkénti világításvezérlés lehetővé teszi, hogy minden asztalnál az adott alkalom szerint állítsák be a fényerőt és színhőmérsékletet: romantikus vacsora, üzleti találkozó vagy ünnepi esemény.
+
+A multizone hangrendszer különböző zenét szolgáltat a bárpultnál, a belső térben és a teraszon. Az egész rendszer egyszerűen vezérelhető tabletről vagy okostelefonról, így a személyzet könnyedén alkalmazkodhat a vendégek igényeihez.`,
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    features: ["Asztali világítás", "Multizone audio", "Klíma zónák", "Jelenetvezérlés", "Tablet vezérlés", "Terasz automatika"],
+    specs: {
+      area: "320 m²",
+      duration: "4 hét",
+      devices: "100+ eszköz",
+      year: "2024"
+    },
+    icon: Building2
   }
 ];
 
@@ -99,7 +249,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: project.title,
     description: project.description,
     openGraph: {
-      title: `${project.title} | megoldjukokosba`,
+      title: `${project.title} | megoldjukosba`,
       description: project.description,
       images: [project.image],
     },

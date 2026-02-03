@@ -81,11 +81,11 @@ export default function Header() {
           {/* Right side - Phone & CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:+3612345678"
+              href="tel:+36706181725"
               className="flex items-center gap-1.5 text-gray-400 hover:text-[#00B1E1] transition-colors text-sm"
             >
               <Phone className="w-3.5 h-3.5 text-[#00B1E1]" />
-              <span>+36 1 234 5678</span>
+              <span>+36 70 618 1725</span>
             </a>
             <Link
               href="/kapcsolat"

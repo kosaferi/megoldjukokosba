@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Home, Building2, Shield, Lightbulb, Thermometer, Speaker, Camera, Wifi } from "lucide-react";
+import { Home, Shield, Lightbulb, Thermometer, Speaker, Camera, Wifi } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Szolgáltatások",
@@ -21,10 +21,10 @@ const services = [
     features: ["Apple HomeKit integráció", "Hangvezérlés Siri-vel", "Automatikus jelenetek", "Távoli hozzáférés"]
   },
   {
-    icon: Building2,
-    title: "Kereskedelmi Megoldások",
-    description: "Professzionális automatizálási rendszerek irodáknak, szállodáknak és kereskedelmi épületeknek. Növelje az energiahatékonyságot és a kényelmet.",
-    features: ["Épületfelügyeleti rendszerek", "Energiagazdálkodás", "Beléptető rendszerek", "Konferenciaterem vezérlés"]
+    icon: Wifi,
+    title: "Homebridge Integráció",
+    description: "Tegye HomeKit-kompatibilissé a nem támogatott okos eszközöket. Tuya, Xiaomi, Shelly és más márkák integrálása az Apple Home alkalmazásba.",
+    features: ["Tuya/Smart Life eszközök", "Xiaomi Mi Home integráció", "Shelly relék támogatása", "Raspberry Pi telepítés"]
   },
   {
     icon: Lightbulb,

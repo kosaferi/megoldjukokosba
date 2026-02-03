@@ -87,8 +87,8 @@ export default function KapcsolatPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white">Telefon</h3>
-                    <a href="tel:+3612345678" className="text-[#00B1E1] hover:underline">
-                      +36 1 234 5678
+                    <a href="tel:+36706181725" className="text-[#00B1E1] hover:underline">
+                      +36 70 618 1725
                     </a>
                   </div>
                 </div>
@@ -112,8 +112,8 @@ export default function KapcsolatPage() {
                   <div>
                     <h3 className="font-semibold text-white">Cím</h3>
                     <p className="text-gray-400">
-                      1234 Budapest<br />
-                      Példa utca 12.
+                      5122 Jászdózsa<br />
+                      Tulsó-Tarnapart utca 2.
                     </p>
                   </div>
                 </div>

@@ -63,14 +63,16 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="text-center lg:text-right">
             <p className="text-gray-500 text-sm mb-1">Telefon</p>
-            <a href="tel:+3612345678" className="text-[#00B1E1] hover:underline font-medium">
-              +36 1 234 5678
+            <a href="tel:+36706181725" className="text-[#00B1E1] hover:underline font-medium">
+              +36 70 618 1725
             </a>
+            <p className="text-gray-500 text-xs mt-2">5122, Jászdózsa</p>
+            <p className="text-gray-500 text-xs">Tulsó-Tarnapart utca 2</p>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
-          <p>&copy; 2024 megoldjukokosba. Minden jog fenntartva.</p>
+        <div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-600 text-xs">
+          <p>&copy; 2026 megoldjukokosba.hu - Minden jog fenntartva.</p>
         </div>
       </div>
     </footer>
