@@ -78,16 +78,6 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Right side - CTA */}
-          <div className="hidden lg:flex items-center">
-            <Link
-              href="/kapcsolat"
-              className="bg-[#00B1E1] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0099c4] transition-colors"
-            >
-              Ajánlatkérés
-            </Link>
-          </div>
-
           {/* Mobile menu button */}
           <button
             type="button"
@@ -116,9 +106,6 @@ export default function Header() {
               </Link>
               <Link href="/kapcsolat" className="text-gray-300 hover:text-[#00B1E1] transition-colors">
                 Kapcsolat
-              </Link>
-              <Link href="/kapcsolat" className="bg-[#00B1E1] text-white px-4 py-3 rounded-lg text-center font-medium">
-                Ajánlatkérés
               </Link>
             </div>
           </div>
