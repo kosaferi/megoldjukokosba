@@ -755,4 +755,257 @@ Segítünk mindkét rendszer telepítésében és konfigurálásában!`,
   }
 ];
 
-// ... existing code ... <type Props and everything after>
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const post = blogPosts.find(p => p.id === id);
+
+  if (!post) {
+    return {
+      title: "Cikk nem található",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: `${post.title} | megoldjukosba`,
+      description: post.excerpt,
+      images: [post.image],
+    },
+  };
+}
+
+export default async function BlogPostPage({ params }: Props) {
+  const { id } = await params;
+  const post = blogPosts.find(p => p.id === id);
+
+  if (!post) {
+    notFound();
+  }
+
+  // Find related posts (same category, excluding current)
+  const relatedPosts = blogPosts
+    .filter(p => p.category === post.category && p.id !== post.id)
+    .slice(0, 3);
+
+  return (
+    <main className="min-h-screen bg-[#060a12]">
+      <Header />
+
+      {/* Hero */}
+      <section className="pt-24 relative">
+        <div className="h-[40vh] md:h-[50vh] relative overflow-hidden">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#060a12] via-[#060a12]/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <div className="container mx-auto max-w-4xl">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00B1E1] transition-colors mb-4"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Vissza a bloghoz
+              </Link>
+              <span className="block text-[#00B1E1] text-sm font-medium mb-2">{post.category}</span>
+              <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">{post.title}</h1>
+              <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  <span>{post.author}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>{post.date}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  <span>{post.readTime} olvasás</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-4 gap-12">
+              {/* Main Content */}
+              <div className="lg:col-span-3">
+                <div className="prose prose-invert prose-lg max-w-none">
+                  {post.content.split('\n\n').map((paragraph, idx) => {
+                    if (paragraph.startsWith('## ')) {
+                      return (
+                        <h2 key={idx} className="text-2xl font-bold text-white mt-8 mb-4">
+                          {paragraph.replace('## ', '')}
+                        </h2>
+                      );
+                    }
+                    if (paragraph.startsWith('### ')) {
+                      return (
+                        <h3 key={idx} className="text-xl font-bold text-white mt-6 mb-3">
+                          {paragraph.replace('### ', '')}
+                        </h3>
+                      );
+                    }
+                    if (paragraph.startsWith('- ')) {
+                      const items = paragraph.split('\n').filter(item => item.startsWith('- '));
+                      return (
+                        <ul key={idx} className="list-disc list-inside text-gray-300 space-y-2 my-4">
+                          {items.map((item, i) => (
+                            <li key={i}>{item.replace('- ', '')}</li>
+                          ))}
+                        </ul>
+                      );
+                    }
+                    if (paragraph.startsWith('1. ')) {
+                      const items = paragraph.split('\n').filter(item => /^\d+\. /.test(item));
+                      return (
+                        <ol key={idx} className="list-decimal list-inside text-gray-300 space-y-2 my-4">
+                          {items.map((item, i) => (
+                            <li key={i}>{item.replace(/^\d+\. /, '')}</li>
+                          ))}
+                        </ol>
+                      );
+                    }
+                    if (paragraph.startsWith('|')) {
+                      // Handle markdown tables
+                      const rows = paragraph.split('\n').filter(row => row.trim());
+                      const headers = rows[0]?.split('|').filter(cell => cell.trim());
+                      const dataRows = rows.slice(2); // Skip header and separator
+
+                      return (
+                        <div key={idx} className="overflow-x-auto my-6">
+                          <table className="w-full text-left border-collapse">
+                            <thead>
+                              <tr className="border-b border-gray-700">
+                                {headers?.map((header, i) => (
+                                  <th key={i} className="py-2 px-4 text-white font-semibold">
+                                    {header.trim()}
+                                  </th>
+                                ))}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {dataRows.map((row, rowIdx) => (
+                                <tr key={rowIdx} className="border-b border-gray-800">
+                                  {row.split('|').filter(cell => cell.trim()).map((cell, cellIdx) => (
+                                    <td key={cellIdx} className="py-2 px-4 text-gray-300">
+                                      {cell.trim()}
+                                    </td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      );
+                    }
+                    return (
+                      <p key={idx} className="text-gray-300 leading-relaxed mb-4">
+                        {paragraph}
+                      </p>
+                    );
+                  })}
+                </div>
+
+                {/* Share */}
+                <div className="mt-12 pt-8 border-t border-gray-800">
+                  <div className="flex items-center gap-4">
+                    <span className="text-gray-400 flex items-center gap-2">
+                      <Share2 className="w-4 h-4" />
+                      Megosztás:
+                    </span>
+                    <div className="flex gap-2">
+                      <button className="p-2 bg-[#1877f2] rounded-lg hover:opacity-80 transition-opacity">
+                        <Facebook className="w-5 h-5 text-white" />
+                      </button>
+                      <button className="p-2 bg-[#1da1f2] rounded-lg hover:opacity-80 transition-opacity">
+                        <Twitter className="w-5 h-5 text-white" />
+                      </button>
+                      <button className="p-2 bg-[#0077b5] rounded-lg hover:opacity-80 transition-opacity">
+                        <Linkedin className="w-5 h-5 text-white" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Author */}
+                <div className="mt-8 p-6 bg-[#111827] border border-gray-800 rounded-xl">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#00B1E1] to-[#0099c4] rounded-full flex items-center justify-center">
+                      <User className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white">{post.author}</h3>
+                      <p className="text-gray-400">{post.authorRole}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sidebar */}
+              <div className="lg:col-span-1">
+                {/* CTA */}
+                <div className="bg-gradient-to-br from-[#00B1E1]/20 to-[#0099c4]/20 border border-[#00B1E1]/30 rounded-xl p-6 sticky top-24">
+                  <h3 className="text-lg font-bold text-white mb-2">Segítségre van szüksége?</h3>
+                  <p className="text-gray-400 text-sm mb-4">Vegye fel velünk a kapcsolatot ingyenes konzultációért!</p>
+                  <Link
+                    href="/kapcsolat"
+                    className="block w-full bg-[#00B1E1] text-white text-center py-3 rounded-lg font-medium hover:bg-[#0099c4] transition-colors"
+                  >
+                    Kapcsolatfelvétel
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Related Posts */}
+            {relatedPosts.length > 0 && (
+              <div className="mt-16 pt-12 border-t border-gray-800">
+                <h2 className="text-2xl font-bold text-white mb-8">Kapcsolódó cikkek</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {relatedPosts.map((relatedPost) => (
+                    <Link
+                      key={relatedPost.id}
+                      href={`/blog/${relatedPost.id}`}
+                      className="group bg-[#111827] border border-gray-800 rounded-xl overflow-hidden hover:border-[#00B1E1]/50 transition-colors"
+                    >
+                      <div className="aspect-video overflow-hidden">
+                        <img
+                          src={relatedPost.image}
+                          alt={relatedPost.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-[#00B1E1] text-xs font-medium">{relatedPost.category}</span>
+                        <h3 className="text-white font-medium mt-1 group-hover:text-[#00B1E1] transition-colors line-clamp-2">
+                          {relatedPost.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm mt-2">{relatedPost.readTime} olvasás</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
