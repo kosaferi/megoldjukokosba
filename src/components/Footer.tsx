@@ -59,16 +59,6 @@ export default function Footer() {
               Kapcsolat
             </Link>
           </nav>
-
-          {/* Contact Info */}
-          <div className="text-center lg:text-right">
-            <p className="text-gray-500 text-sm mb-1">Telefon</p>
-            <a href="tel:+36706181725" className="text-[#00B1E1] hover:underline font-medium">
-              +36 70 618 1725
-            </a>
-            <p className="text-gray-500 text-xs mt-2">5122, Jászdózsa</p>
-            <p className="text-gray-500 text-xs">Tulsó-Tarnapart utca 2</p>
-          </div>
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-600 text-xs">
